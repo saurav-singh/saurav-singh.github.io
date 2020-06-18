@@ -1,4 +1,5 @@
 /* INCLUDE FONTS */
+
 @font-face {
   font-family: MuseoSans900;
   src: url("../assets/fonts/MuseoSans_900.otf");
@@ -20,7 +21,7 @@ body {
   margin: 0 auto !important;
   font-family: Lato, sans-serif !important;
   color: #777 !important;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   min-width: 370px;
 }
 
@@ -87,25 +88,45 @@ p {
   height: 100vh !important;
 }
 
-.exp_container {
-  min-height: 150px;
-  margin: 20px 0;
+.exp_grid {
   display: flex;
   flex-wrap: wrap;
 }
 
-.company_logo {
-  height: 100%;
-  max-height: 175px;
-  width: 175px;
-  margin-left: 2em;
-  border-radius: 1%;
+.exp_container {
+  min-height: 150px;
+  width: 320px;
+  margin: 20px 0;
+  margin-right: 20px;
+  background-color: #fdfdfd;
+  border-left: solid 4px #90bfff;
+}
+
+.exp_header {
+  display: flex;
+  border-bottom: solid 1px #dedddd;
+}
+
+.exp_title {
+  margin-top: 1em;
+}
+
+.exp_title > p {
+  margin: 0;
+  color: #333;
 }
 
 .exp_info {
   height: 100%;
   margin: 0 2em;
   margin-top: 1em;
+  font-size: 0.7em;
+}
+
+.company_logo {
+  width: 140px;
+  margin-right: 10px;
+  padding: 20px;
 }
 
 .tech_containe {
@@ -164,3 +185,21 @@ p {
   position: absolute !important;
   margin: 0 auto !important;
 }
+
+#footer {
+  height: 50px;
+  background-color: #f8f9f9;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+/* MEDIA QUERIES */
+
+/* @media (max-width: 370px) {
+  #illustration {
+    margin-left: 0 !important;
+  }
+} */
