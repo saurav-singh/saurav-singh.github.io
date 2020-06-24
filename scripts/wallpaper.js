@@ -20,32 +20,35 @@ function draw() {
     background(255);
 
     if (mouseIsPressed) {
-        x.push(new Curves(mouseX, mouseY));
+        x.push(new Particle(mouseX, mouseY));
     }
 
     if (x.length > 0) {
         for (let i = x.length - 1; i >= 0; i--) {
+
+            if (x[i].size > 200) {
+                x.pop(i);
+                continue;
+            }
             x[i].update();
-            x[i].art();
+            x[i].render();
         }
     }
 
-    if (x.length > 100) {
-        x = x.slice(1, -1);
-    }
+  
 }
 
-function Curves(x, y) {
+function Particle(x, y) {
     this.pos = createVector(x, y);
     this.dir = createVector(0, 0);
     this.life = 0;
     this.change = random(-1, 1);
     this.changeCheck = random(0.5, 5.5);
-    this.color = color(random(0, 250), random(0, 250), random(0, 255));
+    this.color = color(random(50, 250), random(50, 250), random(50, 255));
     this.size = 2;
     this.sizeAcceleration = 0.2;
 
-    this.art = function () {
+    this.render = function () {
         stroke(this.color);
         stroke(mouseX, 200, mouseY);
         strokeWeight(1)
