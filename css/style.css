@@ -22,7 +22,7 @@ body {
   font-family: Lato, sans-serif !important;
   color: #777 !important;
   overflow-x: hidden !important;
-  min-width: 370px;
+  min-width: 400px;
 }
 
 canvas {
@@ -66,8 +66,6 @@ p {
 
 .section {
   position: relative;
-  min-height: 600px;
-  max-height: 900px;
   box-shadow: black 2px;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -75,7 +73,7 @@ p {
 }
 
 .profile_section {
-  width: 370px;
+  /* width: 370px; */
   display: flex;
 }
 
@@ -91,7 +89,7 @@ p {
 }
 
 .header {
-  height: 100vh !important;
+  height: 95vh !important;
 }
 
 .exp_grid {
@@ -100,7 +98,6 @@ p {
 }
 
 .exp_container {
-  min-height: 150px;
   width: 320px;
   margin: 20px 0;
   margin-right: 20px;
@@ -153,11 +150,16 @@ p {
   transition-duration: 0.3s;
 }
 
+.email {
+  margin: 5px 0;
+  color: #222;
+}
+
 /* ID STYLES */
 
 #illustration {
-  margin-left: 20vh;
   top: 0;
+  margin-left: 15vh;
   position: relative;
 }
 
@@ -197,15 +199,16 @@ p {
   background-color: #f8f9f9;
   text-align: center;
   margin-top: 10px;
-  font-size: 18px;
+  font-size: 12px;
   font-weight: bold;
   padding-top: 10px;
 }
 
 /* MEDIA QUERIES */
 
-/* @media (max-width: 370px) {
+@media (max-width: 500px) {
   #illustration {
-    margin-left: 0 !important;
+   display: none;
   }
-} */
+    /* display: none !important; */
+}

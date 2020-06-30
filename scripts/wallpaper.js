@@ -1,14 +1,16 @@
-// OLD CODE NEED TO CLEAN UP AND IMPROVE
-
+// Globals
 let x = [];
+let active = true;
+
 function resize() {
     const w = window.innerWidth;
     const h = window.innerHeight;
-    createCanvas(w, h);
-    strokeWeight(5);
-    stroke(255);
-    noFill();
-    smooth();
+    active = w >= 500 ? true : false;
+    // Canvas Setup
+    if (active) {
+        createCanvas(w, h);
+        smooth();
+    }
 }
 
 function setup() {
@@ -16,42 +18,38 @@ function setup() {
 }
 
 function draw() {
+    if (active) {
+        background(255);
 
-    background(255);
+        // Add New Particle
+        if (mouseIsPressed) x.push(new Particle(mouseX, mouseY));
 
-    if (mouseIsPressed) {
-        x.push(new Particle(mouseX, mouseY));
-    }
-
-    if (x.length > 0) {
         for (let i = x.length - 1; i >= 0; i--) {
-
-            if (x[i].size > 200) {
+            const p = x[i];
+            // Terminate Particle
+            if (p.size > 300) {
                 x.pop(i);
                 continue;
             }
-            x[i].update();
-            x[i].render();
+            // Update Particle
+            p.update();
+            p.render();
         }
-    }
 
-  
+    }
 }
 
 function Particle(x, y) {
-    this.pos = createVector(x, y);
-    this.dir = createVector(0, 0);
     this.life = 0;
-    this.change = random(-1, 1);
-    this.changeCheck = random(0.5, 5.5);
-    this.color = color(random(50, 250), random(50, 250), random(50, 255));
     this.size = 2;
+    this.change = random(-1, 1);
     this.sizeAcceleration = 0.2;
+    this.pos = createVector(x, y);
+    this.changeCheck = random(0.5, 5.5);
 
     this.render = function () {
-        stroke(this.color);
+        strokeWeight(3)
         stroke(mouseX, 200, mouseY);
-        strokeWeight(1)
         ellipse(this.pos.x, this.pos.y, this.size, this.size);
     };
 
@@ -59,18 +57,13 @@ function Particle(x, y) {
         if (this.life >= this.changeCheck) {
             this.life++;
             this.change *= -1;
-            this.changeCheck = random(0.5, 5.5);
             this.size += this.sizeAcceleration;
             this.sizeAcceleration += random(0.5, 2);
         }
-
-        this.dir = createVector(
-            //x-change
-            sin(this.life),
-            //y-change
-            cos(this.life) * this.change
-        );
-        this.pos.add(this.dir);
+        // Update particle direction
+        const x = sin(this.life);
+        const y = cos(this.life) * this.change;
+        this.pos.add(createVector(x, y));
         this.life += 0.05;
     };
 }
