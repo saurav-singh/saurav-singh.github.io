@@ -3,7 +3,7 @@
 <html>
 
 <head>
-  <title>_Saurav_</title>
+  <title>_Saurav</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width = device-width, initial-scale=1" />
 
@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/animate.css" />
 
   <!-- JS IMPORTS -->
+  <script src="scripts/render.js"></script>
   <script src="scripts/p5.min.js"></script>
   <script src="scripts/wallpaper.js"></script>
 
@@ -42,56 +43,54 @@
 
     <div id="intro" class="col-md-12">
 
-
-
       <!-- INFORMATION -->
 
       <h1 class="animated fadeIn">SAURAV SINGH</h1>
-      <h3 class="animated fadeIn">Software Engineer</h3>
+      <h3 class="animated fadeIn"> &lt/Programmer&gt </h3>
       <div id="mini_divider"> </div>
       <div class="animated fadeIn" id="smallDivider"></div>
       <p class="animated fadeIn">
-        Hi, I'm Saurav! </br>
+        I IS SAURAV. </br>
 
         I completed my bachelors degree in Computer Science from Drexel University
         with concentrations in AI and HCI. </br>
 
         I love programming and creating fun applications.
-        My top 3 favorite languages are C++, Python & Javascript. </br>
+        My favorite languages are C++, Python & Javascript. </br>
 
         I am currently looking for a fulltime Software Engineer position.
         The positions I'm currently interested in are mobile development,
         frontend, fullstack and AI/ML research.
       </p>
 
-
       <!-- SOCIAL PROFILE -->
-      <h4>Profiles</h4>
+
+      <h4 class="animated fadeIn">Profiles</h4>
       <div class="profile_section">
 
         <a href="assets/files/Saurav-Resume.pdf">
-          <img class="profile_icon" src="assets/images/icon_resume.svg">
+          <img class="profile_icon animated flipInY" src="assets/images/icon_resume.svg">
         </a>
 
         <a href="https://www.linkedin.com/in/saurav-/">
-          <img class="profile_icon" src="assets/images/icon_linkedin.svg">
+          <img class="profile_icon animated flipInY" src="assets/images/icon_linkedin.svg">
         </a>
 
         <a href="https://www.instagram.com/sauravmsingh/">
-          <img class="profile_icon" src="assets/images/icon_instagram.svg">
+          <img class="profile_icon animated flipInY" src="assets/images/icon_instagram.svg">
         </a>
 
         <a href="https://github.com/saurav-singh/">
-          <img class="profile_icon" src="assets/images/icon_github.svg">
+          <img class="profile_icon animated flipInY" src="assets/images/icon_github.svg">
         </a>
 
         <a href="https://www.youtube.com/channel/UCgybYtwn9romQ-PTYKBqwzQ">
-          <img class="profile_icon" src="assets/images/icon_youtube.svg">
+          <img class="profile_icon animated flipInY" src="assets/images/icon_youtube.svg">
         </a>
 
       </div>
 
-      <p class="email"> Email: sauravmsingh@gmail.com </p>
+      <p class="email class=" animated fadeIn"> Email: sauravmsingh@gmail.com </p>
 
     </div>
 
@@ -100,7 +99,6 @@
   <div id="section_divider"></div>
 
   <!-- SECTION BODY -->
-
 
   <div class="section container">
 
@@ -111,81 +109,52 @@
       <h4>Experience</h4>
       <div id="title_divider"></div>
 
-      <div class="exp_grid">
+      <div class="exp container-fluid">
 
         <!-- EXPERIENCE 1 -->
 
-        <div class="exp_container">
-          <div class="exp_header">
-            <!-- Company Logo -->
-            <a href="https://www.bentley.com/en">
-              <img class="company_logo" src="assets/images/logo_bently.png">
-            </a>
-            <!-- Work Title -->
-            <div class="exp_title">
-              <h3>Bentley Systems</h3>
-              <p>Software Engineer Intern </p>
-              <p>Spring - Summer 2019 </p>
-            </div>
-          </div>
-          <!-- Work Info -->
-          <div class="exp_info">
-            <p> I was part of the web & mobile team at Bentley for my internship.
-              Worked with UX team to develop an
-              <a href="https://www.behance.net/gallery/82326001/User-Experience-Team-Site-Resources"><strong>icons
-                  site</strong></a>
-              for the internal UX website using React and TypeScript.
-            </p>
+        <div class="exp_card">
+          <a href="https://www.bentley.com/en">
+            <img class="exp_logo" src="assets/images/logo_bently.png">
+          </a>
+          <div class="exp_content">
+            <div class="exp_company">Bentley Systems </div>
+            <div class="exp_title">Software Engineer Intern [ April 2019 - September 2019 ] </div>
+            <div class="exp_desc">Developed and maintained an
+              <a href="https://www.behance.net/gallery/82326001/User-Experience-Team-Site-Resources">icons-site</a>
+              for the internal UX website from ground up.</div>
           </div>
         </div>
 
         <!-- EXPERIENCE 2 -->
 
-        <div class="exp_container">
-          <div class="exp_header">
-            <!-- Company Logo -->
-            <a href="https://www.yptc.com/">
-              <img class="company_logo" src="assets/images/logo_yptc.png">
-            </a>
-            <!-- Work Title -->
-            <div class="exp_title">
-              <h3>YPTC LLC</h3>
-              <p>Data Visualization Coop </p>
-              <p>Spring - Summer 2018 </p>
-            </div>
-          </div>
-          <!-- Work Info -->
-          <div class="exp_info">
-            <p>I was part of the data visualization team at YPTC.
-              Created custom data visualization and interactive dashboards of financial data using React and D3.js.
-            </p>
+        <div class="exp_card">
+          <a href="https://www.yptc.com/">
+            <img class="exp_logo" src="assets/images/logo_yptc.png">
+          </a>
+          <div class="exp_content">
+            <div class="exp_company">Your Part-Time Controller </div>
+            <div class="exp_title">Data Visualization Co-op [ April 2018 - September 2020 ] </div>
+            <div class="exp_desc">Created custom data-visualizations and interactive dashboards. Also worked on some
+              spatial-analysis projects.</div>
           </div>
         </div>
 
         <!-- EXPERIENCE 3 -->
-        <div class="exp_container">
-          <div class="exp_header">
-            <!-- Company Logo -->
-            <a href="https://drexel.edu/cci">
-              <img class="company_logo" src="assets/images/logo_drexel.png">
-            </a>
-            <!-- Work Title -->
-            <div class="exp_title">
-              <h3>Drexel University CCI</h3>
-              <p>Teaching Assistant</p>
-              <p>2018 - 2020</p>
-            </div>
-          </div>
-          <!-- Work Info -->
-          <div class="exp_info">
-            <p>I was a TA for the courses: CS 171, 172 Python Programming | CS 375 - Web Development | CS 338 -
-              GUI | CS 520 - CS foundation </p>
+
+        <div class="exp_card">
+          <a href="https://drexel.edu/cci">
+            <img class="exp_logo" src="assets/images/logo_drexel.png">
+          </a>
+          <div class="exp_content">
+            <div class="exp_company">Drexel University </div>
+            <div class="exp_title">Teaching Assistant [ September 2018 - June 2020 ] </div>
+            <div class="exp_desc">Courses: Python programming I & II, Web Development, Foundation Of Computer Science,
+              GUI.</div>
           </div>
         </div>
 
-
       </div>
-
     </div>
 
     <!-- PROJECTS -->
@@ -195,12 +164,93 @@
       <h4>Projects</h4>
       <div id="title_divider"></div>
 
-      <div class="proj_grid">
-        Update in progress... </br>
-        Most project available in <a href="https://github.com/saurav-singh/">GitHub</a>
-      </div>
+      <div class="proj container">
 
+        <!-- Project 1 -->
+
+        <div class="proj_card">
+          <img class="proj_logo" src="assets/images/project.svg">
+          <div class="proj_content">
+            <div class="proj_title_links">
+              <div class="proj_title">Frand Caller </div>
+              <div class="proj_links">(Soon to be released)</div>
+            </div>
+            <div class="proj_desc">Peer-to-peer video calling app that allows you to call only one friend!</div>
+            <div class="proj_tech">Tech Stack: Flutter, Flask, WebRTC, SocketIO</div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+
+        <div class="proj_card">
+          <img class="proj_logo" src="assets/images/project.svg">
+          <div class="proj_content">
+            <div class="proj_title_links">
+              <div class="proj_title">Music Genre Classifier </div>
+              <div class="proj_links">
+                <a href="https://github.com/saurav-singh/Music-Genre-Classifer"> [Source]</a>
+              </div>
+            </div>
+            <div class="proj_desc">Music genre classificaition using various deep-learning (MLP, CNN, RNN-LSTM) with
+              ~70% accruacy.</div>
+            <div class="proj_tech">Tech Stack: Python, Librosa, Sklearn, Keras</div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+
+        <div class="proj_card">
+          <img class="proj_logo" src="assets/images/project.svg">
+          <div class="proj_content">
+            <div class="proj_title_links">
+              <div class="proj_title">FTP </div>
+              <div class="proj_links">
+                <a href="https://github.com/saurav-singh/FTP"> [Source]</a>
+              </div>
+            </div>
+            <div class="proj_desc">FTP client and multi-threaded server with support for the following commands: [cd, pwd, get, put, ls, QUIT]</div>
+            <div class="proj_tech">Python, Socket, Threading</div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+
+        <div class="proj_card">
+          <img class="proj_logo" src="assets/images/project.svg">
+          <div class="proj_content">
+            <div class="proj_title_links">
+              <div class="proj_title">Symmetry Sketch </div>
+              <div class="proj_links">
+                <a href="https://github.com/saurav-singh/SymmetrySketch">[Source]</a>
+              </div>
+            </div>
+            <div class="proj_desc">A paint application where you can draw symmetric art (mandala) and its fun! </div>
+            <div class="proj_tech">Tech Stack: Java, Java-Swing, Canvas</div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+
+        <div class="proj_card">
+          <img class="proj_logo" src="assets/images/project.svg">
+          <div class="proj_content">
+            <div class="proj_title_links">
+              <div class="proj_title">2-Pikachu </div>
+              <div class="proj_links">
+                <a href="https://github.com/saurav-singh/2Pikachu">[Source]</a>
+                <a href="https://sauravsingh.me/2Pikachu/">[Try-It-Here]</a>
+              </div>
+            </div>
+            <div class="proj_desc">Created 2-cars clone when I was learning JavaScript. (spaghetti code!) </div>
+            <div class="proj_tech">Tech Stack: HTML, CSS, JS, Canvas</div>
+          </div>
+        </div>
+
+      </div>
     </div>
+  </div>
+
+  </div>
 
 
   </div>

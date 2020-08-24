@@ -84,7 +84,7 @@ p {
 }
 
 .profile_icon:hover {
-  transform: scale(1.1);
+  transform: scale(1.2) !important;
   cursor: pointer;
 }
 
@@ -92,56 +92,101 @@ p {
   height: 97vh !important;
 }
 
-.exp_grid {
+.exp_card {
+  margin: 1em 0;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
   display: flex;
-  flex-wrap: wrap;
 }
 
-.exp_container {
-  width: 320px;
-  margin: 20px 0;
-  margin-right: 20px;
-  background-color: #fdfdfd;
-  border-left: solid 4px #90bfff;
+.exp_card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-.exp_header {
-  display: flex;
-  border-bottom: solid 1px #dedddd;
+.exp_content {
+  padding-top: 15px;
+  line-height: 35px;
 }
 
-.exp_title {
-  margin-top: 1em;
-}
-
-.exp_title > p {
-  margin: 0;
+.exp_company {
+  font-size: 24px;
+  font-weight: bold;
   color: #333;
 }
 
-.exp_info {
-  height: 100%;
-  margin: 0 2em;
-  margin-top: 1em;
-  font-size: 0.7em;
+.exp_title {
+  font-size: 18px;
+  color: #333;
 }
 
-.company_logo {
+.exp_desc {
+  background-color: #fafafa;
+  padding: 1em;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  border-radius: 10px;
+}
+
+.exp_logo {
   width: 140px;
   margin-right: 10px;
   padding: 20px;
 }
 
-.tech_containe {
-  border: solid 1px cornflowerblue;
-  height: 400px;
-  margin: 20px 0;
+.proj {
+  max-height: 500px;
+  overflow-y: auto;
 }
 
 .proj_container {
   border: solid 1px cornflowerblue;
   height: 400px;
   margin: 20px 0;
+}
+
+.proj_card {
+  margin: 1em 0;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  display: flex;
+}
+
+.proj_card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  background-color: rgb(255, 240, 190);
+}
+
+.proj_logo {
+  height: 70px;
+  margin-top: 15px;
+  margin-left: 5px;
+}
+
+.proj_content {
+  margin-left: 1em;
+  line-height: 30px;
+}
+
+.proj_title_links {
+  display: inline-flex;
+}
+
+.proj_title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.proj_links {
+  margin-left: 1em;
+}
+
+.proj_desc {
+  font-weight: bold;
+}
+
+.proj_tech {
+  font-style: italic;
 }
 
 .company_logo:hover {
@@ -208,7 +253,7 @@ p {
 
 @media (max-width: 500px) {
   #illustration {
-   display: none;
+    display: none;
   }
-    /* display: none !important; */
+  /* display: none !important; */
 }
