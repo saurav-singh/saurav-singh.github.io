@@ -100,6 +100,20 @@ p {
   height: 40px;
 }
 
+.info {
+  list-style-type: square;
+  font-size: 16px;
+}
+
+.info > li:nth-child(odd) {
+  padding: 0.2em;
+}
+
+.info > li:nth-child(even) {
+  margin-left: 3em;
+  color: #333;
+}
+
 .footer {
   height: 50px;
   /* background-color: #f8f9f9; */
