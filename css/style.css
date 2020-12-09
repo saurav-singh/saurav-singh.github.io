@@ -27,11 +27,14 @@
 
 
 /* TAG STYLES */
+html {
+  overflow-x: hidden !important;
+}
 
 body {
   margin: 0 auto !important;
   font-family: Lato, sans-serif !important;
-  color: #777 !important;
+  color: #777 !important;`
   overflow-x: hidden !important;
   min-width: 400px;
 }
