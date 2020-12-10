@@ -35,7 +35,7 @@ body {
   margin: 0 auto !important;
   font-family: Lato, sans-serif !important;
   color: #777 !important;
-  overflow-x: hidden !important;
+  /* overflow-x: hidden !important; */
   min-width: 400px;
 }
 
@@ -70,6 +70,15 @@ p {
   max-width: 570px;
 }
 
+a {
+  color: #222 !important;
+}
+
+a:hover{
+  text-decoration: none !important;
+  font-weight: bold !important;
+}
+
 /* MENU */
 
 #menu {
@@ -87,6 +96,9 @@ p {
   flex-direction: column;
 }
 
+#menu:hover {
+  cursor: pointer;
+}
 /* CLASS STYLES */
  
 .section {
@@ -106,6 +118,11 @@ p {
 .info {
   list-style-type: square;
   font-size: 16px;
+}
+
+.sub-title {
+  padding: 0.4em !important;
+  padding-left: 1.5em !important;
 }
 
 .info > li:nth-child(odd) {
@@ -184,6 +201,10 @@ p {
 
 #profession {
   background-color: #fafafa;
+}
+
+.work_logo {
+  height: 75px;
 }
 
 /* PAGE - GUITAR */
