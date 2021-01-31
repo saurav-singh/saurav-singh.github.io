@@ -1,0 +1,55 @@
+ul.fireflies{
+    list-style:none;
+    height: 0;
+}
+
+ul.fireflies > li{
+	background-size: cover;
+	background-image: url(../assets/images/fly.png);
+	width:15px; 
+	top:-15px;
+	height:15px;
+	position:absolute;
+    animation: 
+        fadeIn 3s infinite,
+		leftright 24s infinite cubic-bezier(.39,.0,.63,1),
+		updown 8s infinite 1.25s cubic-bezier(.39,.0,.63,1)
+}
+
+ul.fireflies > li:nth-of-type(2){
+animation-delay:4s;
+animation-duration:17s, 8s;
+	animation-fill-mode:backwards, backwards 
+}
+
+ul.fireflies > li:nth-of-type(3){
+animation-delay:1.5s;
+animation-duration:14s, 7s;
+animation-fill-mode:backwards, backwards
+}
+
+ul.fireflies > li:nth-of-type(4){
+animation-delay:5.5s;
+animation-duration:10s, 13s;
+}
+
+ul.fireflies > li:nth-of-type(5){
+animation-fill-mode:backwards, backwards;
+animation-duration:12s, 15s;
+}
+
+@keyframes leftright {
+  0%, 100%{left:20%;}
+	16.666%	{left:90%;}
+	33.333% {left:10%;}
+	50%			{left:50%;}
+  66.666%	{left:70%;}
+	83.333% {left:40%;}
+}
+
+@keyframes updown {
+  0%, 100%{top:0px;width:20px;height:20px}
+  25%{top:70%; }
+	50%{top:50%;width:30px;height:30px}
+	75%{top:70%;width:10px;height:10px }
+}

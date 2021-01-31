@@ -3,238 +3,64 @@
 <html>
 
 <head>
-  <!-- THE BOORING COMPLEX LOOKING CODE GOES HERE -->
-  <title>Saurav``</title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width = device-width, initial-scale=1" />
 
-  <!-- CSS IMPORTS -->
-  <link rel="stylesheet" href="css/style.css" />
-  <!-- <link rel="stylesheet" href="css/bootstrap.min.css" /> -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/animate.css" />
-  <link rel="icon" href="assets/images/sing.png" />
+    <!-- THE BOORING STUFF -->
+    <title>Saurav``</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width = device-width, initial-scale=1" />
 
-  <!-- JS IMPORTS -->
-  <!-- <script src="scripts/render.js"></script>
-  <script src="scripts/p5.min.js"></script> -->
-  <!-- <script src="scripts/wallpaper.js"></script> -->
+    <!-- CSS IMPORTS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/firefly.css" />
+    <!-- ICON -->
+    <link rel="icon" href="assets/images/sing.png" />
 
-  <!-- G-Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169291933-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'UA-169291933-1');
-  </script>
+    <!-- JS IMPORTS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/music.js"></script>
 
+    <!-- G-ANALYTICS -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169291933-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-169291933-1');
+    </script>
 </head>
 
 <body>
 
-  <!-- ####################################################### -->
-  <!-- PAGE - LANDING -->
-  <!-- ####################################################### -->
+    <div class="container-fluid" id="root">
 
-  <div class="section" id="landing">
+        <div id="music_player">
+            <span id="playMusic">
+                <img src="assets/images/icon_play.png"> </span>
+            <span id="pauseMusic">
+                <img src=" assets/images/icon_pause.png"></span>
+        </div>
 
-    <div class="section_banner"></div>
+        <div id="content">
 
-    <!-- HEADER -->
-    <h1 id="header" class="animated flipInX">Saurav Singh</h1>
-    <p id="quote">~ Relax, you're doing fine!</p>
+            <div id="header">
+                <h1 id="name" class="animated flipInX">Saurav Singh</h1>
+                <p id="quote" class="animated zoomInRight">~ Relax, you're doing fine!</p>
+            </div>
 
-    <!-- MENU -->
-    <div id="menu">
-      <div class="logo"></div>
-      <div class="menu"></div>
-    </div>
+            <ul class="fireflies">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
 
-    <!-- ILLUSTRATIONS -->
-    <img id="illustration" src="assets/images/coder.png">
-
-    <!-- SOCIAL -->
-    <div class="profile_section">
-
-      <h3>Find me @</h3>
-      <!-- <a href="assets/files/Saurav-Resume.pdf">
-        <img class="profile_icon animated flipInY" src="assets/images/icon_resume.svg">
-      </a> -->
-
-      <a href="https://www.linkedin.com/in/saurav-/">
-        <img class="profile_icon animated flipInY" src="assets/images/icon_linkedin.svg">
-      </a>
-
-      <a href="https://www.instagram.com/sauravmsingh/">
-        <img class="profile_icon animated flipInY" src="assets/images/icon_instagram.svg">
-      </a>
-
-      <a href="https://github.com/saurav-singh/">
-        <img class="profile_icon animated flipInY" src="assets/images/icon_github.svg">
-      </a>
-
-      <a href="https://www.youtube.com/channel/UCgybYtwn9romQ-PTYKBqwzQ">
-        <img class="profile_icon animated flipInY" src="assets/images/icon_youtube.svg">
-      </a>
+        </div>
 
     </div>
-
-    <p class="email animated fadeIn"> Email: sauravmsingh@gmail.com </p>
-    <p class="email animated fadeIn"> UPDATE IN PROGRESS 12 / 9 / 2020 ...</p>
-
-  </div>
-
-  <div class="section_divider"></div>
-
-  <!-- ####################################################### -->
-  <!-- ####################################################### -->
-
-
-  <!-- ####################################################### -->
-  <!-- PAGE - PROFESSION -->
-  <!-- ####################################################### -->
-
-  <div class="section col-md-12" id="profession">
-
-    <h4> I am Software Engineer by Profession</h4>
-
-    <ul class="info">
-      <li> I love Programming, so I studied Computer Science </li>
-      <li> If not CS, I would probably be doing Arts or Music... I also like the idea of exploring outer space </li>
-      <li> My favorite Programming languages are Python, JavaScript, C++ </li>
-      <li> Recently, I've been very interested in Audio Signal Processing and would like to pursue a PhD in it (maybe ?)
-      </li>
-    </ul>
-
-
-    <h4 class="sub-title">Where I've worked:</h4>
-    <ul class="info">
-      <li> @ <img class="work_logo" src="assets/images/logo_bently.png" /> as a Software Engineer Intern >> Worked on
-        the Frontend using React and TypeScript</li>
-      <li> @ <img class="work_logo" src="assets/images/logo_yptc.png" /> as a Data Visualization Co-op >> Worked
-        on creating interactive visualizationss using React and D3.js</li>
-    </ul>
-
-    <h4 class="sub-title">Some Projects that I'm working on:</h4>
-    <ul class="info">
-      <li> Find a lot of my finished & unfinished projects @
-        <a href="https://github.com/saurav-singh">MY GITHUB</a>
-      </li>
-      <li>My Most recent Project <strong>EZ-Call</strong>, a peer-to-peer video calling App. Soon to released in Android
-        App store and iOS (depending on my mood)</li>
-      <li>Try the old buggy demo version
-        <a href="https://frand-chat.herokuapp.com/">HERE | Below is the screenshot of what latest version looks like</a>
-      </li>
-      <li> <img height="200" src="assets/images/ez-call.jpg" /> </li>
-      <li> Also started working on building a Chess Engine, not sure how far or how good it'll be but gonna give it a
-        shot... (also in github)</li>
-    </ul>
-
-  </div>
-
-  <!-- ####################################################### -->
-  <!-- ####################################################### -->
-
-
-  <!-- ####################################################### -->
-  <!-- PAGE- MUSIC -->
-  <!-- ####################################################### -->
-
-  <div class="section col-md-12" id="music">
-    <h4> I am a Guitarist by hobby</h4>
-
-    <ul class="info">
-      <li> I am a self-taught guitarist (fingerstyle) and its been about 7 years </li>
-      <li> I can play most of the songs by ear but since I got no perfect pitch it wouldn't be in scale
-      </li>
-      <li> Sometimes, I wonder if I should have been YouTuber by uploading anime covers... </li>
-      <li> Recently, I've gotten into classical and jazz music a lot (only listening)... Sometimes, I feel like I would
-        have been a great classical guitarist lol</li>
-      <li>There are my two favorite pieces so far:
-        <a href="https://youtu.be/inBKFMB-yPg">@THIS ONE</a>
-        & <a href="https://youtu.be/0SFhzHBZXfc">@THIS ONE</a> </li>
-      <li> Some other insturments which I really wanna learn and will definitely learn at some point in my life - Violin
-        & Piano</li>
-    </ul>
-
-    <h4 class="sub-title">Some of my old covers</h4>
-    <ul class="info">
-      <li>I usually post my covers as instagram stories when I'm in the mood...</li>
-      <li>The videos below are from my YouTube, where most of the comments are "tuorial / tabs please"</li>
-      <li><iframe width="350" height="200" src="https://www.youtube.com/embed/2U3UUB62PNM">
-        </iframe></li>
-      <li><iframe width="350" height="200" src="https://www.youtube.com/embed/NNy8HGaPf_A">
-        </iframe></li>
-    </ul>
-  </div>
-
-  <!-- ####################################################### -->
-  <!-- ####################################################### -->
-
-  <!-- ####################################################### -->
-  <!-- PAGE - PHOTOGRAPHY -->
-  <!-- ####################################################### -->
-
-  <div class="section col-md-12" id="photography">
-    <h4> I am a noob Photographer</h4>
-    <ul class="info">
-      <li>I am obsessed with trees. Especially their fractal design, so I enjoy taking pictures of them!</li>
-      <li>Google Photos agrees:
-        <img src="assets/images/tree_1.png" height="120" />
-        <img src="assets/images/tree_2.png" height="120" />
-      </li>
-      <li>I've taken photography once in college but still a noob so I use my Pixel 3 / 5 and Snapseed for edits.</li>
-      <li>I enjoy taking pictures of everything except human beings... Below are some pictures from my instagram</li>
-    </ul>
-
-    <h4 class="sub-title">Noob Gallery</h4>
-    <p> Next update...</p>
-  </div>
-
-  <!-- ####################################################### -->
-  <!-- ####################################################### -->
-
-
-  <!-- ####################################################### -->
-  <!-- PAGE - GAMES -->
-  <!-- ####################################################### -->
-
-  <div class="section col-md-12" id="games">
-    <h4> I am not a noob Dota 2 Player</h4>
-
-    <ul class="info">
-      <li> My rank might be Ancient but my skills are that of a Immortal :)</li>
-      <li> My signature hero is Meepo! but recently not, since its nerfed so bad!</li>
-      <li> So, I spam crystal maiden mid these days rofl</li>
-
-
-    </ul>
-
-  </div>
-
-  <!-- ####################################################### -->
-  <!-- ####################################################### -->
-
-  <!-- ####################################################### -->
-  <!-- PAGE - NEPAL -->
-  <!-- ####################################################### -->
-
-  <div class="section col-md-12" id="nepal">
-    <h4> Nepal </h4>
-    <h4 class="sub-title"> Promoting my country here, just because I can...</h4>
-    <ul class="info">
-      <li>I was born and raised in Kathmandu, Nepal</li>
-      <li>Nepal is beautiful but Kathmandu is not.</li>
-      <li>~~~</li>
-    </ul>
-  </div>
-
-  <!-- ####################################################### -->
-  <!-- ####################################################### -->
-
-  <!-- FOOTER -->
-  <div class="footer"> © Saurv Singh | 2020 </div>
 
 </body>
 
