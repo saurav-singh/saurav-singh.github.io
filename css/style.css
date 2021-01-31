@@ -27,10 +27,21 @@
 
 /* GLOBAL TAGS */
 
-body {
-  margin: 0;;
+html, body {
+  margin: 0;
   height: 100vh;
-  overflow: hidden;
+  overflow: hidden !important;
+}
+
+#root {
+  height: 100%;
+  background: url("../assets/images/bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+#header {
+  text-align: center;
+  font-weight: bold;
 }
 
 #music_player {
@@ -91,3 +102,18 @@ body {
 
 
 
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 650px) {
+  #root {
+    height: 100%;
+    background: url("../assets/images/bg.jpg") no-repeat left center;
+    background-size: cover;
+  }
+
+  #header {
+    padding-left: 0;
+    text-align: center;
+    padding-top: 90%;
+  }
+}
