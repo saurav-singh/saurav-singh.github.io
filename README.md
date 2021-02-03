@@ -8,6 +8,6 @@ THIS TIME I'LL COMPLETE IT I SWEAR!
     - EE-MAA-GEE-NAY-CION :) 
 
 ## Media Credits:
-    - Background photo by : <a href="https://unsplash.com/@saaam_chan"> Samuel Berner </a> 
-      on <a href="https://unsplash.com/s/photos/anime"> Unsplash</a>
-    - Music
+    - Background photo by : [Samuel Berner](https://unsplash.com/@saaam_chan)  
+      on [Unsplash](https://unsplash.com/s/photos/anime)
+    - Music tbd
