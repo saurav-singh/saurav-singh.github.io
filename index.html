@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saurav`</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('totoro.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 60px;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(49, 27, 11, 0.5);
+            z-index: 1;
+        }
+
+        .message {
+            position: relative;
+            z-index: 3;
+            color: white;
+            font-family: 'Lobster', cursive;
+            font-size: 1.8rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-shadow: 
+                0 0 10px rgba(255, 255, 255, 0.8),
+                0 0 20px rgba(255, 255, 255, 0.6),
+                0 2px 10px rgba(0, 0, 0, 0.8);
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding-top: 40px;
+            }
+            .message {
+                font-size: 1.4rem;
+                padding: 0 20px;
+            }
+        }
+
+        .firefly {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: radial-gradient(circle, rgba(255, 235, 59, 1), rgba(255, 167, 38, 0.8));
+            border-radius: 50%;
+            box-shadow: 
+                0 0 10px rgba(255, 235, 59, 0.8),
+                0 0 20px rgba(255, 167, 38, 0.6);
+            opacity: 0;
+            animation: fly 20s infinite linear;
+            z-index: 2;
+        }
+
+        .firefly:nth-child(odd) {
+            background: radial-gradient(circle, rgba(255, 167, 38, 0.7), rgba(255, 138, 101, 0.3));
+            box-shadow: 
+                0 0 6px rgba(255, 167, 38, 0.3),
+                0 0 12px rgba(255, 138, 101, 0.2);
+            animation-duration: 35s;
+        }
+
+        .firefly:nth-child(3n) {
+            background: radial-gradient(circle, rgba(255, 241, 118, 0.6), rgba(255, 204, 2, 0.3));
+            box-shadow: 
+                0 0 6px rgba(255, 241, 118, 0.3),
+                0 0 12px rgba(255, 204, 2, 0.1);
+            animation-duration: 40s;
+        }
+
+        @keyframes fly {
+            0% {
+                opacity: 0;
+                transform: translateX(-100px) translateY(50vh) scale(0);
+            }
+            10% {
+                opacity: 1;
+                transform: translateX(10vw) translateY(40vh) scale(1);
+            }
+            25% {
+                opacity: 1;
+                transform: translateX(25vw) translateY(60vh) scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: translateX(50vw) translateY(30vh) scale(1);
+            }
+            75% {
+                opacity: 1;
+                transform: translateX(75vw) translateY(70vh) scale(1);
+            }
+            90% {
+                opacity: 1;
+                transform: translateX(90vw) translateY(45vh) scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: translateX(110vw) translateY(50vh) scale(0);
+            }
+        }
+
+        .firefly-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="overlay"></div>
+        <div class="firefly-container" id="fireflies"></div>
+        <div class="message">
+            Relax you're doing fine!
+        </div>
+    </div>
+
+    <script>
+        // Create subtle fireflies
+        function createFirefly() {
+            const firefly = document.createElement('div');
+            firefly.className = 'firefly';
+            
+            // Random starting position
+            firefly.style.left = '-50px';
+            firefly.style.top = Math.random() * window.innerHeight + 'px';
+            
+            // Random delay
+            firefly.style.animationDelay = Math.random() * 10 + 's';
+            
+            document.getElementById('fireflies').appendChild(firefly);
+            
+            // Remove firefly after animation
+            setTimeout(() => {
+                if (firefly.parentNode) {
+                    firefly.remove();
+                }
+            }, 45000);
+        }
+
+        // Initialize fireflies
+        function initFireflies() {
+            console.log('Creating fireflies...');
+            
+            // Create initial fireflies
+            for (let i = 0; i < 8; i++) {
+                setTimeout(() => createFirefly(), i * 1000);
+            }
+            
+            // Continue creating fireflies more frequently
+            setInterval(createFirefly, 3000);
+        }
+
+        // Start when page loads
+        window.addEventListener('load', initFireflies);
+    </script>
+</body>
+</html>
